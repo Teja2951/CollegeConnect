@@ -2,6 +2,8 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:collegeconnect/auth/view/login_screen.dart';
 import 'package:collegeconnect/auth/view/signup_screen.dart';
 import 'package:collegeconnect/firebase_options.dart';
+import 'package:collegeconnect/home/admin_screen.dart';
+import 'package:collegeconnect/home/s_admin_screen.dart';
 import 'package:collegeconnect/home/student_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -75,10 +77,10 @@ class _MyAppState extends State<MyApp> {
                   if (roleSnapshot.data == "student") {
                     return StudentScreen();
                   } else if(roleSnapshot.data == "s_admin"){
-                    //return ;
+                    return SAdminScreen();
                   }
                    else if(roleSnapshot.data == "admin"){
-                    //return ;
+                    return AdminScreen();
                    }
                 }
                 print('some error determing the user brooo');
